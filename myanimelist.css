@@ -1927,7 +1927,7 @@ a {
 
     /* edited */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(192px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(var(--image-width), max-content));
     /*display: flex;
     justify-content: center;
     flex-wrap: wrap;*/
@@ -2370,8 +2370,8 @@ a {
     border: #EBEBEB 1px solid;
 
     /* edited */
-    width: 192px;
-    height: 272px;
+    width: var(--image-width);
+    height: var(--image-height);
     border-style: none;
     cursor: pointer;
     /* edited */
@@ -2603,6 +2603,8 @@ a {
     --move-add-button-right: -39%;
     --move-add-button-left: -130%;
     --info-round: 7px;
+    --image-width: 192px;
+    --image-height: 272px;
 }
 
 .list-table-data:hover .data.title{
