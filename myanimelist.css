@@ -1926,11 +1926,14 @@ a {
     border: #EBEBEB 1px solid;
 
     /* edited */
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(192px, max-content));
+    /*display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
     border-style: none;
     gap: 10px;
+    justify-content: center;
     /* edited */
 
 }
@@ -2652,7 +2655,9 @@ body{
 }
 
 .list-table > :first-child {
-    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    /* width: 100%; */
 }
 
 .list-table .list-table-data .data.image .image:hover {
