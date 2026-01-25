@@ -2759,8 +2759,8 @@ body {
     --screen-blur: blur(1px) grayscale(25%);
     --font-icon: "FontAwesome 4",FontAwesome;
     --font-1: "Montserrat", sans-serif;
-    --move-add-button-right: -39%;
-    --move-add-button-left: -130%;
+    --move-add-button-right: -38%;
+    --move-add-button-left: -126%;
     --info-round: 7px;
     --image-width: 192px;
     --image-height: 272px;
@@ -2775,8 +2775,14 @@ body {
 
 .list-table-data:hover .data.title .link.sort{
     overflow: hidden;
-    height: 100%;
-    display: block;
+    max-height: 100%;
+    display: inline-block;
+}
+
+.list-table-data:hover .data.title .icon-watch2{
+    /* position: absolute; 
+    right: 10px; */
+    float: right;
 }
 
 .list-table-data:hover .data.title{
@@ -3253,6 +3259,10 @@ option{
 
 .header .username:hover {
     text-decoration-thickness: 4px;
+}
+
+.list-table .list-table-data .data.title {
+    padding-left: 10px;
 }
 
 
