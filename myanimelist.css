@@ -2625,6 +2625,9 @@ body {
 }
 
 .list-table .list-table-header .header-title.status,
+.list-table .list-table-header .header-title.number,
+.list-table .list-table-header .header-title.score,
+.list-table .list-table-header .header-title.type,
 .list-table .list-table-header .header-title.progress,
 .list-table .list-table-header .header-title.chapters,
 .list-table .list-table-header .header-title.volumes,
@@ -2637,14 +2640,11 @@ body {
 .list-table .list-table-header .header-title.retail,
 .list-table .list-table-header .header-title.priority,
 .list-table .list-table-header .header-title.popularity{
-
     width: auto;
-
 }
 
 .list-table .list-table-header .header-title.number {
 
-    width: auto;
     order: 3;
 
 }
@@ -2665,13 +2665,11 @@ body {
 .list-table .list-table-header .header-title.score {
 
     order: 0;
-    width: auto;
 
 }
 
 .list-table .list-table-header .header-title.type {
 
-    width: auto;
     order: 2;
 
 }
