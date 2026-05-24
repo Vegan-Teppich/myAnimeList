@@ -2784,6 +2784,7 @@ body {
     --move-add-button-right: -38%;
     --move-add-button-left: -126%;
     --info-round: 7px;
+    --yt-border-radius: 8px;
     --image-width: 192px;
     --image-height: 272px;
 }
@@ -3244,7 +3245,7 @@ option{
     color: var(--sakura-pink);
     padding: 12px;
     background-color: rgba(255,255,255,0.1);
-    border-radius: 8px;
+    border-radius: var(--yt-border-radius);
     transition-duration: 0.3s;
     transition-timing-function: ease;
     margin-left: 12px;
@@ -3986,31 +3987,20 @@ body.ownlist::before{
 
 /* SKID */
 .list-menu-float {
-    position: relative;
-    top: auto;
-    display: block;
-    width: 904px;
-    height: 0px;
     padding-left: 260px;
-    margin: 0px auto;
-    border: medium;
-    background: 0px 0px;
     text-align: left;
     font-size: 0px;
 }
 
 .icon-menu.quick-add:before,
 .list-menu-float .icon-menu{
-    display: inline-block;
     height: 26px;
     width: 26px;
-    border-radius: 13px;
+    border-radius: var(--yt-border-radius);
     overflow: hidden;
-    text-indent: 0;
-    text-align: left;
     white-space: nowrap;
     vertical-align: top;
-    transition: .3s !important
+    transition: .3s
 }
 
 .list-menu-float .icon-menu{
@@ -4023,23 +4013,17 @@ body.ownlist::before{
 }
 
 .list-menu-float .icon-menu svg.icon{
-    position: absolute;
     top: 6px !important;
     left: 6px !important;
     max-width: 14px;
     max-height: 14px;
-    fill: var(--text);
 }
 
 .list-menu-float .icon-menu .text{
-    top: 0px !important;
-    left: 26px !important;
-    display: inline-block;
+    top: 0px ;
+    left: 26px ;
     width: auto !important;
-    height: 26px;
-    color: white;
     font-size: 14px !important;
-    opacity: 1 !important;
     font: normal 0/26px var(--font-1);
 }
 .list-menu-float .icon-menu:not(.profile):hover{
@@ -4059,33 +4043,26 @@ body.ownlist::before{
 }
 
 .icon-menu.setting .text{
-    top: 0px !important;
-    left: 0px !important;
+    left: 0px;
     width: 240px !important;
     height: 26px !important;
-    overflow: visible;
-    font-size: 0px !important;
-    opacity: 1 !important;
 }
 
 .icon-menu.setting .text a{
-    position: absolute !important;
-    top: 0px !important;
-    left: 13px !important;
-    width: 0px !important;
+    position: absolute;
+    top: 0px;
+    left: 13px;
+    width: 0px;
     height: 26px !important;
-    background: white !important;
+    
+    background-color: white !important;
     border: medium !important;
-    border-radius: 0px 13px 13px 0px;
-    overflow: hidden;
     color: var(--background-color-2) !important;
     font: 14px/26px var(--font-1) !important;
     text-indent: 9px;
-    text-align: center;
     white-space: nowrap;
-    opacity: 0 !important;
 
-    transition: 0.3s !important;
+    transition: 0.3s;
 }
 
 .icon-menu.setting:hover{
@@ -4099,17 +4076,11 @@ body.ownlist::before{
 }
 
 .icon-menu.setting .text a:hover{
-    background: gray !important;
+    background-color: gray !important;
 }
 
 .icon-menu.setting .text, .list-table-header{
-    padding: 2px 0px;
     z-index: -1;
-    pointer-events: none;
-}
-
-.icon-menu.setting:hover .text, .list-table > tbody:first-of-type:hover .list-table-header{
-    pointer-events: auto;
 }
 
 
