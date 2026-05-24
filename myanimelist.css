@@ -2675,7 +2675,7 @@ body {
 }
 
 .list-table .list-table-header .header-title.score .link::before {
-    content: '\f006';
+    content: '\f005';
 }
 .list-table .list-table-header .header-title.type .link::before {
 	content: '\f04b';
