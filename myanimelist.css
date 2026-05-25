@@ -1,6 +1,6 @@
 /* edited */
-@import url('https://valeriolyndon.github.io/MAL-Public-List-Designs/resources/font-awesome-4.7.0/css/font-awesome-force-legacy.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://valeriolyndon.github.io/MAL-Public-List-Designs/resources/font-awesome-4.7.0/css/font-awesome-force-legacy.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* edited */
 
 #advanced-options {
@@ -1799,6 +1799,8 @@ body {
     --move-add-button-left: -126%;
     --info-round: 7px;
     --yt-border-radius: 8px;
+    --yt-padding: 12px;
+    --yt-hover-backgound-color: rgba(255, 255, 255, 0.2);
     --image-width: 192px;
     --image-height: 272px;
 }
@@ -2231,7 +2233,7 @@ option{
     padding: 10px;
     width: 20px;
     height: 20px;
-    border-radius: 9999px;
+    border-radius: var(--yt-border-radius);
     text-align: left;
     font-size: 0;
     margin-left: 12px;
@@ -2257,7 +2259,7 @@ option{
 
 .list-table .list-table-header .header-title .link.sort, .list-unit .list-status-title .stats a {
     color: var(--sakura-pink);
-    padding: 12px;
+    padding: var(--yt-padding);
     background-color: rgba(255,255,255,0.1);
     border-radius: var(--yt-border-radius);
     transition-duration: 0.3s;
@@ -2266,7 +2268,7 @@ option{
 }
 
 .list-table .list-table-header .header-title .link.sort:hover, .list-unit .list-status-title .stats a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--yt-hover-backgound-color);
     color: white;
 }
 
@@ -3015,42 +3017,43 @@ body.ownlist::before{
 
 }
 
-.icon-menu.quick-add:before,
 .list-menu-float .icon-menu{
-    height: 26px;
-    width: 26px;
+    height: 14px;
+    width: 14px;
     border-radius: var(--yt-border-radius);
     overflow: hidden;
     white-space: nowrap;
     vertical-align: top;
-    transition: .3s
+    transition: .3s;
+    top: 57px;
+    margin: 0px 6px 0px 0px;
+    background-color: var(--background-color-2);
+    padding: var(--yt-padding);
 }
 
-.list-menu-float .icon-menu{
-    top: 64px;
-    margin: 0px 6px 0px 0px;
-}
 
 .icon-menu, .list-menu-float form{
     display: inline-block !important;
 }
 
 .list-menu-float .icon-menu svg.icon{
-    top: 6px !important;
-    left: 6px !important;
+    top: 12px !important;
+    left: 12px !important;
     max-width: 14px;
     max-height: 14px;
+    fill: var(--sakura-pink);
 }
 
 .list-menu-float .icon-menu .text{
-    top: 0px ;
-    left: 26px ;
+    top: calc(-12px + var(--yt-padding) + (14px/2));
+    left: calc(var(--yt-padding) *2 + 14px);
     width: auto !important;
     font-size: 14px !important;
     font: normal 0/26px var(--font-1);
 }
 .list-menu-float .icon-menu:not(.profile):hover{
     width: 100px;
+    background-color: var(--yt-hover-backgound-color);
 }
 
 .icon-menu.setting{
@@ -3078,9 +3081,9 @@ body.ownlist::before{
     width: 0px;
     height: 26px !important;
     
-    background-color: white !important;
+    background-color: var(--background-color-2) !important;
     border: medium !important;
-    color: var(--background-color-2) !important;
+    color: var(--sakura-pink) !important;
     font: 14px/26px var(--font-1) !important;
     text-indent: 9px;
     white-space: nowrap;
