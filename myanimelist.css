@@ -3990,6 +3990,7 @@ body.ownlist::before{
     padding-left: 260px;
     text-align: left;
     font-size: 0px;
+    z-index: 0;
 }
 
 .icon-menu.quick-add:before,
